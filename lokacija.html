@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lokacija | Restavracija Marlot</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { display: flex; min-height: 100vh; flex-direction: column; margin: 0; color: #fff6cf; font-family: Georgia, 'Times New Roman', serif; background: #355b0d; }
+    main { flex: 1; }
+    nav { padding: 10px 5%; background: #4a9d11; }
+    nav ul { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
+    nav a { color: #fff3a2; font-size: 19px; font-style: italic; font-weight: bold; }
+    .hero { min-height: 570px; padding: 24px 5% 48px; background: linear-gradient(90deg, rgba(56, 32, 13, .78), rgba(56, 32, 13, .34)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center / cover; }
+    h1 { margin: 0; color: #ffbf19; font-size: clamp(42px, 7vw, 76px); text-shadow: 2px 2px #583713; }
+    h2 { margin: 0 0 22px; color: #ffe33d; font-size: clamp(22px, 3vw, 34px); font-style: italic; }
+    .location-content { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: stretch; max-width: 1050px; margin: 0 auto; }
+    .map { min-height: 370px; border: 5px solid rgba(255, 221, 100, .75); background: #eee5c8; }
+    .map iframe { display: block; width: 100%; height: 100%; min-height: 360px; border: 0; }
+    .details { padding: 24px; background: rgba(255, 248, 220, .94); color: #392b1e; }
+    .details h3 { margin: 0 0 16px; font-size: 26px; font-style: italic; }
+    .details p { line-height: 1.5; }
+    .details a { display: inline-block; margin-top: 6px; padding: 9px 13px; background: #458d0b; color: #fff2a1; font-weight: bold; }
+    .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .photos img { display: block; width: 100%; height: 105px; border: 3px solid #d5bd79; object-fit: cover; }
+    footer { display: flex; justify-content: space-between; gap: 15px; padding: 8px 5%; background: #244500; color: #ffc51e; font-size: 15px; font-weight: bold; }
+    @media (max-width: 650px) {
+      nav ul { justify-content: flex-start; gap: 8px 16px; }
+      nav a { font-size: 16px; }
+      .hero { min-height: 0; padding: 28px 6% 35px; }
+      .location-content { grid-template-columns: 1fr; gap: 16px; }
+      .map, .map iframe { min-height: 280px; }
+      footer { flex-direction: column; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="meni.html">Meni</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="zgodovina.html">Zgodovina</a></li>
+      <li><a href="lokacija.html">Lokacija</a></li>
+      <li><a href="kontak.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main class="hero">
+    <h1>Restavracija Marlot</h1>
+    <h2>Kje nas najdete</h2>
+    <div class="location-content">
+      <div class="map">
+        <iframe title="Zemljevid do restavracije Marlot" src="https://maps.google.com/maps?q=Cesta%20181%2C%20Cerknica&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <section class="details">
+        <h3>Obiščite nas</h3>
+        <p><strong>Naslov:</strong><br>Cesta 181, Cerknica</p>
+        <p><strong>Odpiralni čas:</strong><br>Vsak dan, 9.00–22.00</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Cesta+181%2C+Cerknica" target="_blank" rel="noopener noreferrer">Odpri zemljevid</a>
+        <div class="photos">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=85" alt="Notranjost restavracije">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=85" alt="Restavracija v večernem času">
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <span>Cesta 181, Cerknica</span>
+    <span><a href="index.html">Restavracija Marlot</a></span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Restavracija Marlot</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { display: flex; min-height: 100vh; flex-direction: column; margin: 0; color: #fff6cf; font-family: Georgia, 'Times New Roman', serif; background: #355b0d; }
+    main { flex: 1; }
+    nav { padding: 10px 5%; background: #4a9d11; }
+    nav ul { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
+    nav a { color: #fff3a2; font-size: 19px; font-style: italic; font-weight: bold; }
+    .hero { min-height: 570px; padding: 24px 5% 48px; background: linear-gradient(90deg, rgba(56, 32, 13, .8), rgba(56, 32, 13, .36)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center / cover; }
+    h1 { margin: 0; color: #ffbf19; font-size: clamp(42px, 7vw, 76px); text-shadow: 2px 2px #583713; }
+    h2 { margin: 0 0 22px; color: #ffe33d; font-size: clamp(22px, 3vw, 34px); font-style: italic; }
+    .contact-layout { display: grid; grid-template-columns: 1fr .75fr 1fr; gap: 18px; align-items: stretch; max-width: 1150px; margin: 0 auto; }
+    .info, .reservation { padding: 22px; background: rgba(255, 248, 220, .95); color: #392b1e; }
+    .info h3, .reservation h3 { margin: 0 0 15px; font-size: 24px; font-style: italic; }
+    .info p { margin: 13px 0; line-height: 1.45; }
+    .info a { color: #355b0d; font-weight: bold; }
+    .staff-photo { width: 100%; min-height: 360px; border: 5px solid rgba(255, 221, 100, .75); object-fit: cover; }
+    .reservation label { display: block; margin: 12px 0; font-size: 14px; font-style: italic; font-weight: bold; }
+    .reservation input, .reservation textarea { width: 100%; margin-top: 5px; padding: 10px; border: 1px solid #bcae8c; background: #fffdf6; font: 16px Georgia, 'Times New Roman', serif; }
+    .reservation textarea { min-height: 75px; resize: vertical; }
+    .reservation button { width: 100%; padding: 11px; border: 0; background: #458d0b; color: #fff2a1; font: bold 16px Georgia, 'Times New Roman', serif; cursor: pointer; }
+    .note { margin: 10px 0 0; color: #655640; font-size: 12px; }
+    footer { display: flex; justify-content: space-between; gap: 15px; padding: 8px 5%; background: #244500; color: #ffc51e; font-size: 15px; font-weight: bold; }
+    @media (max-width: 850px) {
+      .contact-layout { grid-template-columns: 1fr 1fr; }
+      .staff-photo { min-height: 300px; }
+    }
+    @media (max-width: 600px) {
+      nav ul { justify-content: flex-start; gap: 8px 16px; }
+      nav a { font-size: 16px; }
+      .hero { min-height: 0; padding: 28px 6% 35px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 14px; }
+      .staff-photo { min-height: 260px; max-height: 330px; }
+      footer { flex-direction: column; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="meni.html">Meni</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="zgodovina.html">Zgodovina</a></li>
+      <li><a href="lokacija.html">Lokacija</a></li>
+      <li><a href="kontak.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main class="hero">
+    <h1>Restavracija Marlot</h1>
+    <h2>Kontakt in rezervacije</h2>
+    <div class="contact-layout">
+      <section class="info">
+        <h3>Oglasite se nam</h3>
+        <p><strong>Telefon:</strong><br><a href="tel:+38668068068">068 068 068</a></p>
+        <p><strong>E-pošta:</strong><br><a href="mailto:info@marlot.si">info@marlot.si</a></p>
+        <p><strong>Naslov:</strong><br>Cesta 181, Cerknica</p>
+        <p><strong>Odpiralni čas:</strong><br>Vsak dan, 9.00–22.00</p>
+        <p>Veselimo se vašega klica ali obiska!</p>
+      </section>
+      <img class="staff-photo" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=85" alt="Prijazna postrežba v restavraciji">
+      <form class="reservation" action="mailto:info@marlot.si" method="post" enctype="text/plain">
+        <h3>Pošljite povpraševanje</h3>
+        <label for="name">Ime in priimek<input id="name" name="Ime" autocomplete="name" required></label>
+        <label for="email">E-pošta<input id="email" name="E-pošta" type="email" autocomplete="email" required></label>
+        <label for="people">Število oseb<input id="people" name="Število oseb" type="number" min="1" max="30"></label>
+        <label for="date">Datum in čas<input id="date" name="Datum in čas" type="datetime-local"></label>
+        <label for="message">Sporočilo<textarea id="message" name="Sporočilo"></textarea></label>
+        <button type="submit">Pošlji povpraševanje</button>
+        <p class="note">Gumb odpre vaš e-poštni program za pošiljanje sporočila.</p>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <span>Cesta 181, Cerknica</span>
+    <span><a href="index.html">Restavracija Marlot</a></span>
+  </footer>
+</body>
+</html>

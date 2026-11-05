@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meni | Restavracija Marlot</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { display: flex; min-height: 100vh; flex-direction: column; margin: 0; color: #fff6cf; font-family: Georgia, 'Times New Roman', serif; background: #355b0d; }
+    main { flex: 1; }
+    nav { padding: 10px 5%; background: #4a9d11; }
+    nav ul { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
+    nav a { color: #fff3a2; font-size: 19px; font-style: italic; font-weight: bold; }
+    .hero { min-height: 570px; padding: 24px 5% 48px; background: linear-gradient(90deg, rgba(42, 30, 18, .83), rgba(42, 30, 18, .48)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center / cover; }
+    h1 { margin: 0; color: #ffbf19; font-size: clamp(42px, 7vw, 76px); text-shadow: 2px 2px #583713; }
+    h2 { margin: 0 0 22px; color: #ffe33d; font-size: clamp(22px, 3vw, 34px); font-style: italic; }
+    .menu-layout { display: grid; grid-template-columns: 1.65fr .85fr; gap: 18px; max-width: 1150px; margin: 0 auto; }
+    .food-panel, .drink-panel { padding: 20px; color: #fff8df; background: rgba(48, 42, 30, .78); border-top: 3px solid #d5ad42; }
+    .food-panel h3, .drink-panel h3 { margin: 0 0 14px; color: #fff; font-family: Arial, sans-serif; font-size: 25px; }
+    .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+    .menu-group { margin-bottom: 14px; }
+    .menu-group h4 { margin: 0 0 4px; color: #ffcb32; font-family: Arial, sans-serif; font-size: 18px; }
+    .menu-group ul { margin: 0; padding-left: 18px; }
+    .menu-group li { margin: 2px 0; line-height: 1.35; }
+    .drink-panel .menu-group { margin-bottom: 17px; }
+    footer { display: flex; justify-content: space-between; gap: 15px; padding: 8px 5%; background: #244500; color: #ffc51e; font-size: 15px; font-weight: bold; }
+    @media (max-width: 750px) {
+      nav ul { justify-content: flex-start; gap: 8px 16px; }
+      nav a { font-size: 16px; }
+      .hero { min-height: 0; padding: 28px 6% 35px; }
+      .menu-layout { grid-template-columns: 1fr; }
+      .food-grid { gap: 8px 14px; }
+      footer { flex-direction: column; font-size: 13px; }
+    }
+    @media (max-width: 480px) {
+      .food-grid { grid-template-columns: 1fr; }
+      .food-panel, .drink-panel { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="meni.html">Meni</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="zgodovina.html">Zgodovina</a></li>
+      <li><a href="lokacija.html">Lokacija</a></li>
+      <li><a href="kontak.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main class="hero">
+    <h1>Restavracija Marlot</h1>
+    <h2>Odkrijte naš celoten meni</h2>
+    <div class="menu-layout">
+      <section class="food-panel">
+        <h3>Naše jedi</h3>
+        <div class="food-grid">
+          <div>
+            <section class="menu-group">
+              <h4>Predjedi</h4>
+              <ul>
+                <li>Domači narezek (pršut, klobasa, sir)</li>
+                <li>Goveji tatarec</li>
+                <li>Gobova kremna juha s krutoni</li>
+              </ul>
+            </section>
+            <section class="menu-group">
+              <h4>Glavne jedi</h4>
+              <ul>
+                <li>Marlotove BBQ rebrce</li>
+                <li>Gurmanski Marlot burger s krompirčkom</li>
+                <li>Pica Hiše Marlot</li>
+                <li>Golaž s kruhovimi cmoki</li>
+                <li>File postrvi z mandlji in zelenjavo</li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section class="menu-group">
+              <h4>Solate in priloge</h4>
+              <ul>
+                <li>Sezonska solata s prelivom</li>
+                <li>Pečen krompir z zelišči</li>
+                <li>Grška solata</li>
+              </ul>
+            </section>
+            <section class="menu-group">
+              <h4>Sladice</h4>
+              <ul>
+                <li>Jabolčni zavitek s cimetom</li>
+                <li>Čokoladni mousse z malinami</li>
+                <li>Domači sladoled različnih okusov</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <aside class="drink-panel">
+        <h3>Pijače</h3>
+        <section class="menu-group">
+          <h4>Vinska karta</h4>
+          <ul>
+            <li>Lokalna primorska in notranjska vina</li>
+            <li>Izbor slovenskih in tujih vin</li>
+          </ul>
+        </section>
+        <section class="menu-group">
+          <h4>Piva</h4>
+          <ul>
+            <li>Svetlo in temno pivo</li>
+            <li>Izbor stekleničenih in lokalnih piv</li>
+          </ul>
+        </section>
+        <section class="menu-group">
+          <h4>Brezalkoholne pijače</h4>
+          <ul>
+            <li>Domači sokovi</li>
+            <li>Mineralna voda</li>
+            <li>Različni gazirani napitki</li>
+          </ul>
+        </section>
+        <section class="menu-group">
+          <h4>Topli napitki</h4>
+          <ul>
+            <li>Kava</li>
+            <li>Čaj</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <span>Cesta 181, Cerknica</span>
+    <span><a href="index.html">Restavracija Marlot</a></span>
+  </footer>
+</body>
+</html>

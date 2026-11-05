@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerija | Restavracija Marlot</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { display: flex; min-height: 100vh; flex-direction: column; margin: 0; color: #fff6cf; font-family: Georgia, 'Times New Roman', serif; background: #355b0d; }
+    main { flex: 1; }
+    nav { padding: 10px 5%; background: #4a9d11; }
+    nav ul { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
+    nav a { color: #fff3a2; font-size: 19px; font-style: italic; font-weight: bold; }
+    .hero { min-height: 570px; padding: 24px 5% 48px; background: linear-gradient(90deg, rgba(56, 32, 13, .78), rgba(56, 32, 13, .35)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=85') center / cover; }
+    h1 { margin: 0; color: #ffbf19; font-size: clamp(42px, 7vw, 76px); text-shadow: 2px 2px #583713; }
+    h2 { margin: 0 0 22px; color: #ffe33d; font-size: clamp(22px, 3vw, 34px); font-style: italic; }
+    .gallery { display: grid; grid-template-columns: 1fr 1.35fr 1fr; grid-template-rows: repeat(2, 190px); gap: 12px; max-width: 1050px; margin: 0 auto; }
+    .gallery img { display: block; width: 100%; height: 100%; border: 4px solid rgba(255, 221, 100, .75); object-fit: cover; }
+    .gallery img:nth-child(2) { grid-column: 2; grid-row: 1 / span 2; }
+    footer { display: flex; justify-content: space-between; gap: 15px; padding: 8px 5%; background: #244500; color: #ffc51e; font-size: 15px; font-weight: bold; }
+    @media (max-width: 650px) {
+      nav ul { justify-content: flex-start; gap: 8px 16px; }
+      nav a { font-size: 16px; }
+      .hero { min-height: 0; padding: 28px 6% 35px; }
+      .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 150px); gap: 10px; }
+      .gallery img:nth-child(2) { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+      footer { flex-direction: column; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="meni.html">Meni</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="zgodovina.html">Zgodovina</a></li>
+      <li><a href="lokacija.html">Lokacija</a></li>
+      <li><a href="kontak.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main class="hero">
+    <h1>Restavracija Marlot</h1>
+    <h2>Odkrijte vzdušje in kulinariko</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=85" alt="Burger s prilogo">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Notranjost restavracije Marlot">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=85" alt="Pica iz pečice">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=85" alt="Pogrinjek za večerjo">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=85" alt="Prijetno urejena restavracija">
+    </div>
+  </main>
+  <footer>
+    <span>Cesta 4. maja 1, Cerknica</span>
+    <span><a href="index.html">Restavracija Marlot</a></span>
+  </footer>
+</body>
+</html>
